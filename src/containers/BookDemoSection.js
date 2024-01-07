@@ -1,5 +1,5 @@
 "use client"
-// components/Footer.js
+// conatiners/BookDemoSection.js
 import React from 'react';
 import styled from 'styled-components';
 

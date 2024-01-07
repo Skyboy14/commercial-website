@@ -1,6 +1,6 @@
 "use client"
+// conatiners/WhatWeDoSection.js
 import Image from 'next/image';
-// components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
 

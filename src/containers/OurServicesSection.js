@@ -1,9 +1,8 @@
 "use client"
+// conatiners/OurServicesSection.js
 import Image from 'next/image';
-// components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
-// import ServiceCarousel from './ServiceCarousel';
 
 const Title = styled.div`
     margin: auto;

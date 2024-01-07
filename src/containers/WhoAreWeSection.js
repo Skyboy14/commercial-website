@@ -1,6 +1,6 @@
 "use client"
+// conatiners/WhoAreWeSection.js
 import Image from 'next/image';
-// components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
 
@@ -93,7 +93,7 @@ const StyledButton = styled.div`
 `;
 
 
-const SectionB = () => {
+const WhoAreWeSection = () => {
   return (
     <Wapper>
       <Image
@@ -135,4 +135,4 @@ const SectionB = () => {
   );
 };
 
-export default SectionB;
+export default WhoAreWeSection;

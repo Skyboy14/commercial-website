@@ -1,5 +1,4 @@
 "use client"
-// pages/index.js
 import Footer from '@/containers/Footer';
 import Header from '@/containers/Header';
 import HeadingCarousel from '@/components/HeadingCarousel';

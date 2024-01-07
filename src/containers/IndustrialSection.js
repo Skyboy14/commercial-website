@@ -1,6 +1,6 @@
 "use client"
+// conatiners/IndustrialSection.js
 import Image from 'next/image';
-// components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
 import IndustrialCarousel from '../components/IndustrialCarousel';
