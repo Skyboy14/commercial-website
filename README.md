@@ -1,6 +1,4 @@
-# website2.0
-## Project Name
-## Cygnustics Website
+# website2.0 - Cygnustics Website
 
 ## Description
 This project is a responsive website built using Next.js and React, showcasing various industrial services. The website provides information about the services offered by the company along with a visually appealing display of service categories.
