@@ -56,24 +56,33 @@ const Wrapper = styled.section`
   padding-bottom: 3%;
 `
 
+const IndustrialSectionData = {
+  image: {
+    icon: {
+      address: '/icon-logo.png',
+      alt: 'icon logo'
+    }
+  },
+  title: 'Industries',
+  description: 'Tailoring Solutions for Diverse Industries',
+}
+
 const IndustrialSection = () => {
   return (
     <Wrapper >
       <Title>
         <text>
           <Image
-            src='/icon-logo.png'
-            alt='icon logo'
+            src={IndustrialSectionData.image.icon.address}
+            alt={IndustrialSectionData.image.icon.alt}
             width={20}
             height={20}
           />
-          Industries
+          {IndustrialSectionData.title}
         </text>
       </Title>
-
       <HeadingTitle>
-        Tailoring Solutions for
-        Diverse Industries
+        {IndustrialSectionData.description}
       </HeadingTitle>
       <IndustrialCarousel />
     </Wrapper>

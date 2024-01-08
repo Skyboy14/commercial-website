@@ -1,20 +1,20 @@
 "use client"
-import Footer from '@/containers/Footer';
+import React from 'react';
 import Header from '@/containers/Header';
-import HeadingCarousel from '@/components/HeadingCarousel';
+import HeadingCarouselSection from '@/containers/HeadingCarouselSection';
 import IndustrialSection from '@/containers/IndustrialSection';
 import WhoAreWeSection from '@/containers/WhoAreWeSection';
 import OurServicesSection from '@/containers/OurServicesSection';
-import React from 'react';
 import WhatWeDoSection from '@/containers/WhatWeDoSection';
 import BookDemoSection from '@/containers/BookDemoSection';
+import Footer from '@/containers/Footer';
 
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <HeadingCarousel />
+      <HeadingCarouselSection />
       <IndustrialSection />
       <WhoAreWeSection />
       <OurServicesSection />

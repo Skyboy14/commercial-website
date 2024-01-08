@@ -59,7 +59,7 @@ const StyledButton = styled.div`
   border: 1px solid var(--2, #F3F3F3);
   background: #3B6CBC;
   width: fit-content;
-  padding: 3px 6px;
+  padding: 9px 18px;
   margin: 3% 0;
 
   & > span {
@@ -72,30 +72,32 @@ const StyledButton = styled.div`
   }
 `;
 
+const BookDemoData = {
+    title: 'Book a Demo',
+    quote: '“Discover the Future of Digital Formation and  Quality"',
+    description: 'Join us for an exclusive demo of our cutting-edge Digital Fomation Management Software. This innovative solution is transforming the landscape of digital formation, offering unprecedented digital transparency and efficiency in the supply chain.',
+    buttonText: 'Book Demo'
+}
 
 const BookDemoSection = () => {
     return (
         <Cover>
-
             <Wapper>
                 <div style={{ paddingLeft: '8%' }}>
                     <HeadingTitle>
-                        Book a Demo
+                        {BookDemoData.title}
                     </HeadingTitle>
-
                     <QouteHeading>
-                        “Discover the Future of Digital Formation and  Quality"
+                        {BookDemoData.quote}
                     </QouteHeading>
-
                 </div>
                 <div>
                     <StyledText>
-                        Join us for an exclusive demo of our cutting-edge Digital Fomation Management Software. This innovative solution is transforming the landscape of digital formation, offering unprecedented digital transparency and efficiency in the supply chain.
+                        {BookDemoData.description}
                     </StyledText>
-
                     <StyledButton>
                         <span>
-                            Book Demo
+                            {BookDemoData.buttonText}
                         </span>
                     </StyledButton>
                 </div>

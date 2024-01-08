@@ -52,7 +52,7 @@ const HeadingTitle = styled.div`
 
 const Wrapper = styled.section`
   background-color: #E9F0FF;
-  padding-bottom: 3%;
+  padding-bottom: 6%;
 `
 
 const StyledButton = styled.div`
@@ -106,24 +106,34 @@ const TitleOverlay = styled.span`
   width: 87%;
 `;
 
-const ourServices = [
-  {
-    label: '/services/tech.png',
-    title: 'Technology Consulting'
+const ourServicesData = {
+  image: [
+    {
+      label: '/services/tech.png',
+      title: 'Technology Consulting'
+    },
+    {
+      label: '/services/supply.png',
+      title: 'Supply Chain Management'
+    },
+    {
+      label: '/services/robotic.png',
+      title: 'Robotic Process Automation'
+    },
+    {
+      label: '/services/enterprise.png',
+      title: 'Enterprise Solution'
+    }
+  ],
+  title: 'What we serve',
+  title2: 'Our Services',
+  icon: {
+    address: '/icon-logo.png',
+    alt: 'icon logo'
   },
-  {
-    label: '/services/supply.png',
-    title: 'Supply Chain Management'
-  },
-  {
-    label: '/services/robotic.png',
-    title: 'Robotic Process Automation'
-  },
-  {
-    label: '/services/enterprise.png',
-    title: 'Enterprise Solution'
-  }
-];
+  buttonText: 'View All Services',
+}
+
 
 const OurServicesSection = () => {
   return (
@@ -131,25 +141,25 @@ const OurServicesSection = () => {
       <Title>
         <text>
           <Image
-            src='/icon-logo.png'
-            alt='icon logo'
+            src={ourServicesData.icon.address}
+            alt={ourServicesData.icon.alt}
             width={20}
             height={20}
           />
-          What we serve
+          {ourServicesData.title}
         </text>
       </Title>
-
       <HeadingTitle>
-        Our Services
+        {ourServicesData.title2}
       </HeadingTitle>
       <StyledDiv>
-        {ourServices.map((services, index) => (
+        {ourServicesData['image'].map((services, index) => (
           <ServiceItem key={index}>
             <Image
               src={services.label}
               height={240}
               width={240}
+              alt={services.title}
             />
             <TitleOverlay>
               {services.title}
@@ -159,7 +169,7 @@ const OurServicesSection = () => {
       </StyledDiv>
       <StyledButton>
         <span>
-          View All Services
+          {ourServicesData.buttonText}
         </span>
       </StyledButton>
     </Wrapper>

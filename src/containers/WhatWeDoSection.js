@@ -7,6 +7,7 @@ import styled from 'styled-components';
 const Wapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    padding-bottom: 3%;
     `;
 
 const Title = styled.div`
@@ -79,7 +80,7 @@ const StyledButton = styled.div`
   border: 1px solid var(--2, #F3F3F3);
   background: #3B6CBC;
   width: fit-content;
-  padding: 3px 6px;
+  padding: 9px 18px;
   margin: 3% 0;
 
   & > span {
@@ -92,6 +93,21 @@ const StyledButton = styled.div`
   }
 `;
 
+const WhatWeDoSectionData = {
+  title: 'Who we Do',
+  title2: 'Our Work',
+  quote: ' “Drive Business Growth with Groundbreaking Solutions"',
+  description: `In today's fast- paced and ever-evolving business landscape, staying ahead of the curve is not just an advantage, it's a necessity. "Drive Business Growth with Groundbreaking Solutions" encapsulates our commitment to providing innovative and transformative solutions that propel businesses forward.`,
+  buttonText: 'Know More',
+  icon: {
+    address: '/icon-logo.png',
+    alt: 'icon logo'
+  },
+  image: {
+    address: '/Images/OurWork.png',
+    alt: 'our work image'
+  }
+}
 
 const WhatWeDoSection = () => {
   return (
@@ -100,34 +116,35 @@ const WhatWeDoSection = () => {
         <Title>
           <text>
             <Image
-              src='/icon-logo.png'
-              alt='icon logo'
+              src={WhatWeDoSectionData.icon.address}
+              alt={WhatWeDoSectionData.icon.alt}
               width={20}
               height={20}
             />
-            Who we Do
+            {WhatWeDoSectionData.title}
           </text>
         </Title>
 
         <HeadingTitle>
-          Our Work
+          {WhatWeDoSectionData.title2}
         </HeadingTitle>
 
         <QouteHeading>
-          “Drive Business Growth with Groundbreaking Solutions"
+          {WhatWeDoSectionData.quote}
         </QouteHeading>
         <StyledText>
-          In today's fast-paced and ever-evolving business landscape, staying ahead of the curve is not just an advantage, it's a necessity. "Drive Business Growth with Groundbreaking Solutions" encapsulates our commitment to providing innovative and transformative solutions that propel businesses forward.
+          {WhatWeDoSectionData.description}
         </StyledText>
 
         <StyledButton>
           <span>
-            Know More
+            {WhatWeDoSectionData.buttonText}
           </span>
         </StyledButton>
       </div>
       <Image
-        src='/Images/OurWork.png'
+        src={WhatWeDoSectionData.image.address}
+        alt={WhatWeDoSectionData.image.alt}
         height={390}
         width={390}
       />

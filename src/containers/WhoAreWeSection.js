@@ -92,42 +92,55 @@ const StyledButton = styled.div`
   }
 `;
 
+const WhoAreWeSectionData = {
+  title: 'Who we are',
+  title2: 'The Essence of Our Company',
+  quote: '“To Foster More Promising Tomorrows, We Employ Innovation & Shared Wisdom”',
+  description: ` We are an ardent provider of food safety and quality software, empowering the industry with cutting-edge solutions that automate regulatory compliance, mitigate risk, and enhance operational efficiency, all while upholding the highest standards of excellence.`,
+  buttonText: 'Know More',
+  icon: {
+    address: '/icon-logo.png',
+    alt: 'icon logo'
+  },
+  image: {
+    address: '/Images/whoarewe1.png',
+    alt: 'whoAreWe picture'
+  }
+}
 
 const WhoAreWeSection = () => {
   return (
     <Wapper>
       <Image
-        src='/Images/whoarewe1.png'
+        src={WhoAreWeSectionData.image.address}
         height={390}
         width={390}
+        alt={WhoAreWeSectionData.image.alt}
       />
       <div style={{ paddingRight: '8%', paddingBottom: '6%' }}>
         <Title>
           <text>
             <Image
-              src='/icon-logo.png'
-              alt='icon logo'
+              src={WhoAreWeSectionData.icon.address}
+              alt={WhoAreWeSectionData.icon.alt}
               width={20}
               height={20}
             />
-            Who we are
+            {WhoAreWeSectionData.title}
           </text>
         </Title>
-
         <HeadingTitle>
-          The Essence of Our Company
+          {WhoAreWeSectionData.title2}
         </HeadingTitle>
-
         <QouteHeading>
-          “To Foster More Promising Tomorrows, We Employ Innovation & Shared Wisdom”
+          {WhoAreWeSectionData.quote}
         </QouteHeading>
         <StyledText>
-          We are an ardent provider of food safety and quality software, empowering the industry with cutting-edge solutions that automate regulatory compliance, mitigate risk, and enhance operational efficiency, all while upholding the highest standards of excellence.
+          {WhoAreWeSectionData.description}
         </StyledText>
-
         <StyledButton>
           <span>
-            Know More
+            {WhoAreWeSectionData.buttonText}
           </span>
         </StyledButton>
       </div>
