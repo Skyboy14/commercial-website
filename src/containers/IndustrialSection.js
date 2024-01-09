@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import IndustrialCarousel from '../components/IndustrialCarousel';
+import { IndustrialSectionData } from '../../public/content/content';
 
 const Title = styled.div`
     margin: auto;
@@ -35,7 +36,6 @@ const Title = styled.div`
   }
 `;
 
-
 const HeadingTitle = styled.div`
   text-align: center;
   /* font-family: Manrope; */
@@ -55,17 +55,6 @@ const Wrapper = styled.section`
   background-color: #E9F0FF;
   padding-bottom: 3%;
 `
-
-const IndustrialSectionData = {
-  image: {
-    icon: {
-      address: '/icon-logo.png',
-      alt: 'icon logo'
-    }
-  },
-  title: 'Industries',
-  description: 'Tailoring Solutions for Diverse Industries',
-}
 
 const IndustrialSection = () => {
   return (

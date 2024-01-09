@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { OurServicesSectionData } from '../../public/content/content';
 
 const Title = styled.div`
     margin: auto;
@@ -106,54 +107,25 @@ const TitleOverlay = styled.span`
   width: 87%;
 `;
 
-const ourServicesData = {
-  image: [
-    {
-      label: '/services/tech.png',
-      title: 'Technology Consulting'
-    },
-    {
-      label: '/services/supply.png',
-      title: 'Supply Chain Management'
-    },
-    {
-      label: '/services/robotic.png',
-      title: 'Robotic Process Automation'
-    },
-    {
-      label: '/services/enterprise.png',
-      title: 'Enterprise Solution'
-    }
-  ],
-  title: 'What we serve',
-  title2: 'Our Services',
-  icon: {
-    address: '/icon-logo.png',
-    alt: 'icon logo'
-  },
-  buttonText: 'View All Services',
-}
-
-
 const OurServicesSection = () => {
   return (
     <Wrapper >
       <Title>
         <text>
           <Image
-            src={ourServicesData.icon.address}
-            alt={ourServicesData.icon.alt}
+            src={OurServicesSectionData.icon.address}
+            alt={OurServicesSectionData.icon.alt}
             width={20}
             height={20}
           />
-          {ourServicesData.title}
+          {OurServicesSectionData.title}
         </text>
       </Title>
       <HeadingTitle>
-        {ourServicesData.title2}
+        {OurServicesSectionData.title2}
       </HeadingTitle>
       <StyledDiv>
-        {ourServicesData['image'].map((services, index) => (
+        {OurServicesSectionData['image'].map((services, index) => (
           <ServiceItem key={index}>
             <Image
               src={services.label}
@@ -169,7 +141,7 @@ const OurServicesSection = () => {
       </StyledDiv>
       <StyledButton>
         <span>
-          {ourServicesData.buttonText}
+          {OurServicesSectionData.buttonText}
         </span>
       </StyledButton>
     </Wrapper>

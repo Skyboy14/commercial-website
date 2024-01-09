@@ -5,25 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the styles
 import Image from 'next/image';
 import styled from 'styled-components';
-
-const images = [
-  {
-    label: '/Images/earthImage.png',
-    title: {
-      line1: 'Crafting Blueprints for Success:  ',
-      line2: 'Solutions Management in the Digital Age'
-    },
-    alt: ' Crafting Blueprints for Success: Solutions Management in the Digital Age'
-  },
-  {
-    label: '/Images/techImage.png',
-    title: {
-      line1: 'Creating Top-Notch Blueprint or ',
-      line2: 'Digital Formation'
-    },
-    alt: 'Creating Top-Notch Blueprint or Digital Formation'
-  }
-];
+import { HeaderCarouselImage } from '../../public/content/content';
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
@@ -87,7 +69,7 @@ const HeadingCarouselSection = () => {
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === HeaderCarouselImage.length - 1 ? 0 : prevIndex + 1));
   };
 
   useEffect(() => {
@@ -107,7 +89,7 @@ const HeadingCarouselSection = () => {
       showThumbs={false} // Hide thumbnails
       dynamicHeight={true}
     >
-      {images.map((image, index) => (
+      {HeaderCarouselImage.map((image, index) => (
         <div key={index} className="slide">
           <Image src={image.label} alt={image.alt} width={800} height={400} />
           <div className="image-title">

@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
 
         {/* Favicon */}
-        <link rel="icon" href="/icon-logo.png" aria-label='company-icon' />
+        <link rel="icon" href="/icon-logo.png" />
 
         {/* Additional meta tags or link tags can be added here */}
 

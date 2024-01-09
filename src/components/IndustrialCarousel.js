@@ -4,33 +4,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import EastIcon from '@mui/icons-material/East';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { IndustrilaCarouselImage } from '../../public/content/content';
 
-const images = [
-  {
-    label: '/industrialLogo/banking.png',
-    title: 'Banking'
-  },
-  {
-    label: '/industrialLogo/retail.png',
-    title: 'Retail'
-  },
-  {
-    label: '/industrialLogo/lifeScience.png',
-    title: 'Life Science'
-  },
-  {
-    label: '/industrialLogo/health.png',
-    title: 'Health care'
-  },
-  {
-    label: '/industrialLogo/food.png',
-    title: 'Food Manufacturing'
-  },
-  {
-    label: '/industrialLogo/tech.png',
-    title: 'HighTech'
-  }
-];
+
 
 const CarouselContainer = styled.div`
   overflow: hidden;
@@ -111,7 +87,7 @@ const CustomCarousel = ({ items, setItems }) => {
 };
 
 const IndustrialCarousel = () => {
-  const [items, setItems] = useState(images);
+  const [items, setItems] = useState(IndustrilaCarouselImage);
 
   return (
     <div>

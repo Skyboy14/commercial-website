@@ -2,6 +2,7 @@
 // conatiners/BookDemoSection.js
 import React from 'react';
 import styled from 'styled-components';
+import { BookDemoData } from '../../public/content/content';
 
 
 const Cover = styled.div`
@@ -72,12 +73,7 @@ const StyledButton = styled.div`
   }
 `;
 
-const BookDemoData = {
-    title: 'Book a Demo',
-    quote: '“Discover the Future of Digital Formation and  Quality"',
-    description: 'Join us for an exclusive demo of our cutting-edge Digital Fomation Management Software. This innovative solution is transforming the landscape of digital formation, offering unprecedented digital transparency and efficiency in the supply chain.',
-    buttonText: 'Book Demo'
-}
+
 
 const BookDemoSection = () => {
     return (

@@ -2,41 +2,9 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { FooterServiceData } from '../../public/content/content';
 
-const servicesData = {
-  image: {
-    logo: {
-      address: '/Logo.png',
-      alt: 'website logo'
-    },
-    Message: {
-      address: '/socialMediaIcon/Message.png',
-      alt: 'Message icon'
-    },
-    linkedIn: {
-      address: '/socialMediaIcon/linkedIn.png',
-      alt: 'linkedIn icon'
-    },
-    whatsApp: {
-      address: '/socialMediaIcon/whatsApp.png',
-      alt: 'whatsApp icon'
-    },
-    whatsApp: {
-      address: '/socialMediaIcon/whatsApp.png',
-      alt: 'whatsApp icon'
-    },
-  },
-  contant: {
-    ContactUs: 'Contact Us:',
-    email: 'info@cygnustics.com',
-    followUs: 'follow us:',
-  },
-  category: ['Links', 'Industries', 'Services', 'Product & Solution'],
-  Links: ['Home', 'Who we are', 'What we do', 'Connect us', 'Worldwide'],
-  Industries: ['Banking', 'Retail', 'Life Science', 'Health care', 'Food Manufacturing', 'High Tech'],
-  Services: ['Robotic Process Automation', 'Robotic Test Automation', 'Technology Consulting', 'Health care', 'Supply Chain Management', 'Enterprise Solution'],
-  'Product & Solution': ['Supplier Management Solutions', 'Quality Management Solutions', 'Compliance Management Solutions', 'Learning Management Solutions', 'GFSI Software Solutions', 'Lab Management Solutions', 'Food Safety Program Solutions', 'Audit & Gap Assessment Solutions']
-};
+
 
 const StyledFooter = styled.footer`
   display: grid;
@@ -89,45 +57,45 @@ const Footer = () => {
     <StyledFooter>
       <StyledDiv>
         <Image
-          src={servicesData['image']['logo']['address']}
+          src={FooterServiceData['image']['logo']['address']}
           width={147}
           height={33}
-          alt={servicesData['image']['logo']['alt']} />
+          alt={FooterServiceData['image']['logo']['alt']} />
         <StyledHead>
           <div>
-            {servicesData.contant.ContactUs}
+            {FooterServiceData.contant.ContactUs}
           </div>
         </StyledHead>
         <StyledLink>
           <StyledImage
-            src={servicesData['image']['Message']['address']}
+            src={FooterServiceData['image']['Message']['address']}
             width={20}
             height={20}
-            alt={servicesData['image']['Message']['alt']} />
-          {servicesData.contant.email}
+            alt={FooterServiceData['image']['Message']['alt']} />
+          {FooterServiceData.contant.email}
         </StyledLink>
         <StyledHead>
           <div>
-            {servicesData.contant.followUs}
+            {FooterServiceData.contant.followUs}
           </div>
           <StyledImage
-            src={servicesData['image']['linkedIn']['address']}
+            src={FooterServiceData['image']['linkedIn']['address']}
             width={30}
             height={30}
-            alt={servicesData['image']['linkedIn']['alt']} />
+            alt={FooterServiceData['image']['linkedIn']['alt']} />
           <StyledImage
-            src={servicesData['image']['whatsApp']['address']}
+            src={FooterServiceData['image']['whatsApp']['address']}
             width={30}
             height={30}
-            alt={servicesData['image']['whatsApp']['alt']} />
+            alt={FooterServiceData['image']['whatsApp']['alt']} />
         </StyledHead>
       </StyledDiv>
-      {servicesData['category'].map((categories, index) => {
+      {FooterServiceData['category'].map((categories, index) => {
         return (
           <div key={index}>
             <StyledHead>{categories}</StyledHead>
             <ul style={{ padding: 0 }}>
-              {servicesData[categories].map((service, index) => (
+              {FooterServiceData[categories].map((service, index) => (
                 <StyledLink key={index}>{service}</StyledLink>
               ))}
             </ul>

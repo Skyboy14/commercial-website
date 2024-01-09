@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { WhatWeDoSectionData } from '../../public/content/content';
 
 const Wapper = styled.div`
     display: grid;
@@ -15,7 +16,7 @@ const Title = styled.div`
     justify-content: center;
     width: fit-content;
     padding-top: 9%;
-    padding-bottom: 3%;
+    padding-bottom: 6%;
 
   & > text {
     color: #3B6CBC;
@@ -93,26 +94,31 @@ const StyledButton = styled.div`
   }
 `;
 
-const WhatWeDoSectionData = {
-  title: 'Who we Do',
-  title2: 'Our Work',
-  quote: ' “Drive Business Growth with Groundbreaking Solutions"',
-  description: `In today's fast- paced and ever-evolving business landscape, staying ahead of the curve is not just an advantage, it's a necessity. "Drive Business Growth with Groundbreaking Solutions" encapsulates our commitment to providing innovative and transformative solutions that propel businesses forward.`,
-  buttonText: 'Know More',
-  icon: {
-    address: '/icon-logo.png',
-    alt: 'icon logo'
-  },
-  image: {
-    address: '/Images/OurWork.png',
-    alt: 'our work image'
-  }
-}
+const ImageWrapper = styled.div`
+  padding-left: 18%;
+  padding-top: 9%;
+`;
+
+const DataWrapper = styled.div`
+  padding-left: 11%;;
+`;
+
+const StyledImage1 = styled(Image)`
+  position: absolute;
+  z-index: 0;
+  padding-top: 4%;
+  padding-left: 5%;
+  `;
+
+const StyledImage2 = styled(Image)`
+  padding-top: 30px;
+  padding-left: 36px;
+`;
 
 const WhatWeDoSection = () => {
   return (
     <Wapper>
-      <div style={{ paddingLeft: '8%' }}>
+      <DataWrapper>
         <Title>
           <text>
             <Image
@@ -124,30 +130,35 @@ const WhatWeDoSection = () => {
             {WhatWeDoSectionData.title}
           </text>
         </Title>
-
         <HeadingTitle>
           {WhatWeDoSectionData.title2}
         </HeadingTitle>
-
         <QouteHeading>
           {WhatWeDoSectionData.quote}
         </QouteHeading>
         <StyledText>
           {WhatWeDoSectionData.description}
         </StyledText>
-
         <StyledButton>
           <span>
             {WhatWeDoSectionData.buttonText}
           </span>
         </StyledButton>
-      </div>
-      <Image
-        src={WhatWeDoSectionData.image.address}
-        alt={WhatWeDoSectionData.image.alt}
-        height={390}
-        width={390}
-      />
+      </DataWrapper>
+      <ImageWrapper>
+        <StyledImage1
+          src={WhatWeDoSectionData.image.address}
+          alt={WhatWeDoSectionData.image.alt}
+          height={390}
+          width={390}
+        />
+        <StyledImage2
+          src={WhatWeDoSectionData.unionImage.address}
+          alt={WhatWeDoSectionData.unionImage.alt}
+          height={390}
+          width={390}
+        />
+      </ImageWrapper>
     </Wapper>
   );
 };

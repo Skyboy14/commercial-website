@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { WhoAreWeSectionData } from '../../public/content/content';
 
 const Wapper = styled.div`
     display: grid;
@@ -92,31 +93,39 @@ const StyledButton = styled.div`
   }
 `;
 
-const WhoAreWeSectionData = {
-  title: 'Who we are',
-  title2: 'The Essence of Our Company',
-  quote: '“To Foster More Promising Tomorrows, We Employ Innovation & Shared Wisdom”',
-  description: ` We are an ardent provider of food safety and quality software, empowering the industry with cutting-edge solutions that automate regulatory compliance, mitigate risk, and enhance operational efficiency, all while upholding the highest standards of excellence.`,
-  buttonText: 'Know More',
-  icon: {
-    address: '/icon-logo.png',
-    alt: 'icon logo'
-  },
-  image: {
-    address: '/Images/whoarewe1.png',
-    alt: 'whoAreWe picture'
-  }
-}
+const ImageWrapper = styled.div`
+  padding-left: 12%;
+  padding-top: 9%;
+`;
+
+const StyledImage1 = styled(Image)`
+  position: absolute;
+  z-index: -1;
+  `;
+
+const StyledImage2 = styled(Image)`
+  padding-top: 30px;
+  padding-left: 36px;
+`;
 
 const WhoAreWeSection = () => {
   return (
     <Wapper>
-      <Image
-        src={WhoAreWeSectionData.image.address}
-        height={390}
-        width={390}
-        alt={WhoAreWeSectionData.image.alt}
-      />
+      <ImageWrapper>
+        <StyledImage1
+          src={WhoAreWeSectionData.unionImage.address}
+          height={390}
+          width={390}
+          alt={WhoAreWeSectionData.unionImage.alt}
+        />
+        <StyledImage2
+          src={WhoAreWeSectionData.image.address}
+          height={390}
+          width={390}
+          alt={WhoAreWeSectionData.image.alt}
+        />
+      </ImageWrapper>
+
       <div style={{ paddingRight: '8%', paddingBottom: '6%' }}>
         <Title>
           <text>
