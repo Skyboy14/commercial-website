@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import IndustrialCarousel from '../components/IndustrialCarousel';
 import { IndustrialSectionData } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 const Title = styled.div`
     margin: auto;
@@ -15,13 +16,13 @@ const Title = styled.div`
     padding-bottom: 3%;
 
   & > text {
-    color: #3B6CBC;
+    color: ${color.primary};
     text-align: center;
-    /* font-family: 'Proxima Nova'; */
+    font-family: ${font.ProximaNova};
     font-size: 20px;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: 400;
-    border : 1px solid #3B6CBC;
+    border : 1px solid ${color.primary};
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -38,21 +39,21 @@ const Title = styled.div`
 
 const HeadingTitle = styled.div`
   text-align: center;
-  /* font-family: Manrope; */
+  font-family: ${font.Manrope};
   font-size: 46px;
-  /* font-style: normal; */
+  font-style: normal;
   font-weight: 600;
   line-height: 64px;
-  background: linear-gradient(91deg, #464646 2.73%, rgba(101, 101, 101, 0.80) 52.78%, #565656 93.64%);
+  background: ${color.linerGradiant03};
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: ${color.transparent};
   width: 40% !important;
   margin: auto;
 `
 
 const Wrapper = styled.section`
-  background-color: #E9F0FF;
+  background-color: ${color.lightPrimary};
   padding-bottom: 3%;
 `
 

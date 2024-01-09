@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MenuData } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 const Overlay = styled.div`
   position: fixed;
@@ -9,7 +10,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: auto;
-  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  background: ${color.transparentBackground};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,14 +32,14 @@ const CloseButton = styled.button`
   height: 36px;
   width: 36px;
   font-size: 33px;
-  background-color: #3B6CBC;
-  color: #FFFFFF;
+  background-color: ${color.coloredBackground};
+  color: ${color.secondary};
   border-radius: 50%;
 `;
 
 const StyledHeadingDiv = styled.div`
-  color: #FFF;
-  font-family: Manrope;
+  color: ${color.lightSecondary};
+  font-family: ${font.Manrope};
   font-size: 51px;
   font-style: normal;
   font-weight: 400;
@@ -50,8 +51,8 @@ const StyledHeadingDiv = styled.div`
 `
 
 const StyledContentDiv = styled.div`
-  color: #FFF;
-  font-family: Proxima Nova;
+  color: ${color.lightSecondary};
+  font-family: ${font.ProximaNova};
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -61,24 +62,20 @@ const StyledContentDiv = styled.div`
 `
 
 const StyledColoredHeading = styled.li`
-  font-family: Manrope;
+  font-family: ${font.Manrope};
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background: linear-gradient(91deg, #3B6CBC 3.66%, rgba(82, 116, 173, 0.80) 36.53%, rgba(67, 107, 172, 0.87) 55.86%, rgba(65, 119, 206, 0.80) 73.98%, #3B6CBC 98.15%);
+  background: ${color.linerGradiant01};
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  & :: marker{
-    color: red;
-  }
+  -webkit-text-fill-color: ${color.transparent};
 `
 
 const StyledHeading = styled.li`
-  color: #252525;
-  font-family: Manrope;
+  color: ${color.text};
+  font-family: ${font.Manrope};
   font-size: 45px;
   font-style: normal;
   font-weight: 400;
@@ -88,7 +85,7 @@ const StyledHeading = styled.li`
 `;
 
 const StyledBackground = styled.div`
-  background: #3B6CBC;
+  background: ${color.primary};
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -125,7 +122,7 @@ const WrapperDivCover = styled.ul`
 const StyledHr = styled.hr`
   opacity: 0.4;
   width: 80%;
-  background: #FFF;
+  background: ${color.lightSecondary};
 `;
 
 

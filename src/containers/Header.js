@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import FullScreenMenu from '../components/FullScreenMenu';
 import LangSelect from '../components/LangSelect';
+import { color } from '../../public/styleContetnt/styleContent';
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -13,7 +14,7 @@ const HeaderContainer = styled.header`
   padding: 18px 20px;
   display: flex;
   height: 27px;
-  background: rgba(0, 0, 0, 0.20);
+  background: ${color.lightText};
   backdrop-filter: blur(20px);
 `;
 
@@ -36,7 +37,7 @@ const HamburgerButton = styled.button`
     display: block;
     height: 3px;
     width: 18px;
-    background-color: #007bff;
+    background-color: ${color.darkPrimary};
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 3px;
@@ -44,7 +45,7 @@ const HamburgerButton = styled.button`
 
   &:hover {
     span {
-      background-color: #0056b3; /* Darker blue color on hover */
+      background-color: ${color.darkerPrimary};
     }
   }  
   

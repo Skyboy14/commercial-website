@@ -6,6 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the st
 import Image from 'next/image';
 import styled from 'styled-components';
 import { HeaderCarouselImage } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
@@ -32,24 +33,23 @@ const StyledCarousel = styled(Carousel)`
     transform: translateX(-50%);
     font-size: 42px;
     line-height: 84px;
-    color: #FFF;
+    color: ${color.lightSecondary};
   }
 
   .carousel .slide .image-title .first-line{
     text-align: center;
-    font-family: Manrope;
+    font-family: ${font.Manrope};
     font-style: normal;
     font-weight: 700;
   }
 
   .carousel .slide .image-title .second-line{
-    background: linear-gradient(92deg, #3B6CBC 25.99%, rgba(145, 184, 248, 0.88) 43.63%, rgba(230, 239, 255, 0.82) 54%, rgba(145, 184, 248, 0.91) 63.72%, #3B6CBC 76.69%);
+    background: ${color.linerGradiant02};
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Manrope;
+    -webkit-text-fill-color: ${color.transparent};
+    font-family: ${font.Manrope};
     font-style: normal;
     font-weight: 800;
-    
   }
 
   .carousel .thumbs-wrapper {

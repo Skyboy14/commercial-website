@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import EastIcon from '@mui/icons-material/East';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { IndustrilaCarouselImage } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 
 
@@ -44,15 +45,15 @@ const CarouselItem = styled.div`
 
 const StyledLabel = styled.div`
     text-align: center;
-    /* font-family: Manrope; */
+    font-family: ${font.Manrope}; 
     font-size: 20px;
-    /* font-style: normal; */
+    font-style: normal; 
     font-weight: 500;
     line-height: normal;
-    background: linear-gradient(91deg, #3B6CBC 3.66%, rgba(82, 116, 173, 0.80) 36.53%, rgba(67, 107, 172, 0.87) 55.86%, rgba(65, 119, 206, 0.80) 73.98%, #3B6CBC 98.15%);
-    /* background-clip: text; */
+    background: ${color.linerGradiant01};
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: ${color.transparent};
     padding-top: 3px
 `;
 
@@ -72,7 +73,7 @@ const CustomCarousel = ({ items, setItems }) => {
 
   return (
     <CarouselContainer>
-      <KeyboardBackspaceIcon sx={{ color: '#3B6CBC' }} onClick={prevSlide} />
+      <KeyboardBackspaceIcon sx={{ color: color.primary }} onClick={prevSlide} />
       <CarouselTrack>
         {items.map((item, index) => (
           <CarouselItem key={index}>
@@ -81,7 +82,7 @@ const CustomCarousel = ({ items, setItems }) => {
           </CarouselItem>
         ))}
       </CarouselTrack>
-      <EastIcon sx={{ color: '#3B6CBC' }} onClick={nextSlide} />
+      <EastIcon sx={{ color: color.primary }} onClick={nextSlide} />
     </CarouselContainer>
   );
 };

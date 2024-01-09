@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { WhoAreWeSectionData } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 const Wapper = styled.div`
     display: grid;
@@ -18,13 +19,13 @@ const Title = styled.div`
     padding-bottom: 3%;
 
   & > text {
-    color: #3B6CBC;
+    color: ${color.primary};
     text-align: center;
-    /* font-family: 'Proxima Nova'; */
+    font-family: ${font.ProximaNova};
     font-size: 20px;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: 400;
-    border : 1px solid #3B6CBC;
+    border : 1px solid ${color.primary};
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -40,25 +41,25 @@ const Title = styled.div`
 `;
 
 const HeadingTitle = styled.div`
-  /* font-family: Manrope; */
+ font-family: ${font.Manrope};
   font-size: 46px;
-  /* font-style: normal; */
+   font-style: normal;
   font-weight: 600;
   line-height: 64px;
-  background: linear-gradient(91deg, #464646 2.73%, rgba(101, 101, 101, 0.80) 52.78%, #565656 93.64%);
+  background: ${color.linerGradiant03};
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: ${color.transparent};
   padding-bottom: 6%;
 `
 
 const QouteHeading = styled.div`
-// font-family: Manrope;
+font-family: ${font.Manrope};
 font-size: 30px;
-// font-style: normal;
+font-style: normal;
 font-weight: 500;
 line-height: normal;
-background: linear-gradient(91deg, #3B6CBC 3.66%, rgba(82, 116, 173, 0.80) 36.53%, rgba(67, 107, 172, 0.87) 55.86%, rgba(65, 119, 206, 0.80) 73.98%, #3B6CBC 98.15%);
+background: ${color.linerGradiant01};
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -67,8 +68,8 @@ background-clip: text;
 `
 
 const StyledText = styled.div`
-  color: #252525;
-  /* font-family: Proxima Nova; */
+  color:  ${color.text};
+  font-family: ${font.ProximaNova};
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -78,16 +79,16 @@ const StyledText = styled.div`
 const StyledButton = styled.div`
   border-radius: 8px;
   border: 1px solid var(--2, #F3F3F3);
-  background: #3B6CBC;
+  background: ${color.primary};
   width: fit-content;
   padding: 9px 18px;
   margin: 3% 0;
 
   & > span {
-    color: #F1F1F1;
-    /* font-family: Proxima Nova; */
+    color: ${color.lightGrey};
+    font-family: ${font.ProximaNova};
     font-size: 18px;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: 300;
     line-height: 30px;
   }
