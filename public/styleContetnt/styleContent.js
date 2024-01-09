@@ -8,6 +8,7 @@ export const color = {
     lightGrey: '#F1F1F1',
     text: '#252525',
     lightText: 'rgba(0, 0, 0, 0.20)',
+    lighterText: 'rgba(59, 108, 188, 0.10)',
     transparent: 'transparent',
     coloredBackground: '#3B6CBC',
     transparentBackground: 'rgba(255, 255, 255, 0.95)', /* Semi-transparent white background */
@@ -15,6 +16,7 @@ export const color = {
     linerGradiant02: 'linear-gradient(92deg, #3B6CBC 25.99%, rgba(145, 184, 248, 0.88) 43.63%, rgba(230, 239, 255, 0.82) 54%, rgba(145, 184, 248, 0.91) 63.72%, #3B6CBC 76.69%)',
     linerGradiant03: 'linear-gradient(91deg, #464646 2.73%, rgba(101, 101, 101, 0.80) 52.78%, #565656 93.64%)',
     linerGradiant04: 'linear-gradient(90deg, #3B6CBC -16.73%, rgba(189, 214, 255, 0.80) 22.81%, rgba(168, 201, 255, 0.87) 46.05%, rgba(163, 198, 255, 0.80) 67.86%, #BAD4FF 96.93%)',
+    linerGradiant05: 'linear-gradient(92deg, #3B6CBC 1.72%, rgba(99, 147, 225, 0.88) 35.66%, rgba(102, 146, 220, 0.82) 55.61%, rgba(92, 136, 207, 0.91) 74.32%, #3B6CBC 99.27%)',
 }
 
 export const font = {

@@ -3,12 +3,13 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { FooterServiceData } from '../../public/content/content';
+import { color, font } from '../../public/styleContetnt/styleContent';
 
 
 
 const StyledFooter = styled.footer`
   display: grid;
-  grid-template-columns: 7fr repeat(4,5fr);
+  grid-template-columns: 7fr repeat(4 , 5fr);
   padding: 6% 7% 2%;
 `;
 
@@ -21,15 +22,15 @@ const StyledImage = styled(Image)`
 `;
 
 const StyledHead = styled.div`
-  font-family: Manrope;
+  font-family: ${font.Manrope};
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background: linear-gradient(92deg, #3B6CBC 1.72%, rgba(99, 147, 225, 0.88) 35.66%, rgba(102, 146, 220, 0.82) 55.61%, rgba(92, 136, 207, 0.91) 74.32%, #3B6CBC 99.27%);
+  background: ${color.linerGradiant05};
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: ${color.transparent};
 
   & > div {
     font-size: 18px;
@@ -38,16 +39,16 @@ const StyledHead = styled.div`
 `;
 
 const StyledLink = styled.li`
-  color: #252525;
-  font-family: Manrope; 
+  color: ${color.text};
+  font-family: ${font.Manrope};
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   list-style-type: none;
   padding: 6px 0px;
-      display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 
