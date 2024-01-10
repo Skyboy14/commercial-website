@@ -49,6 +49,7 @@ const StyledLink = styled.li`
   padding: 6px 0px;
   display: flex;
   align-items: center;
+  opacity: 0.6;
 `;
 
 
