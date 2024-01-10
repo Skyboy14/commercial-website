@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Cygnustic Website',
-  description: 'Generated Cygnustic Website',
+  title: 'Cygnustics',
+  description: 'Generated Cygnustics Website',
   author: 'Akash Yadav',
   keywords: 'web development, Next.js, React, etc.',
   // image: '/path/to/your/image.jpg',  // Replace with the path to your image
@@ -13,8 +13,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
-
 
   return (
     <html lang='en'  >

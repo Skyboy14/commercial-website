@@ -74,6 +74,12 @@ const StyledButton = styled.div`
   }
 `;
 
+const StyledWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
 
 
 const BookDemoSection = () => {
@@ -88,7 +94,7 @@ const BookDemoSection = () => {
                         {BookDemoData.quote}
                     </QouteHeading>
                 </div>
-                <div>
+                <StyledWrapper>
                     <StyledText>
                         {BookDemoData.description}
                     </StyledText>
@@ -97,7 +103,7 @@ const BookDemoSection = () => {
                             {BookDemoData.buttonText}
                         </span>
                     </StyledButton>
-                </div>
+                </StyledWrapper>
             </Wapper>
         </Cover>
     );
